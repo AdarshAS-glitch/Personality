@@ -1,28 +1,33 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask import Flask, jsonify, render_template, request, send_from_directory
 import json
+from flask_cors import CORS
+import os
 
-app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+app = Flask(__name__, static_folder='static')
+CORS(app)
 
-# Load questions from JSON file
-try:
-    with open('questions.json') as f:
-        questions = json.load(f)
-except Exception as e:
-    print(f"Error loading questions: {e}")
-    questions = []
+# Load questions from a JSON file
+with open('questions.json') as f:
+    questions = json.load(f)
+
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')
+
+@app.route('/static/<path:path>')
+def serve_static(path):
+    return send_from_directory('static', path)
 
 @app.route('/questions', methods=['GET'])
 def get_questions():
-    return jsonify(questions)  # Return questions as JSON
+    return jsonify(questions)
 
 @app.route('/submit', methods=['POST'])
 def submit_answers():
     data = request.json
     print("User answers:", data)
 
-    # Dummy scoring logic (you'll improve this later!)
+    # Dummy scoring logic (you'll improve this later)
     mbti = "ENFP"
     enneagram = "Type 7"
     big_five = {
