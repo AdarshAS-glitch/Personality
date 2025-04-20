@@ -1,9 +1,17 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 h1 {
@@ -12,18 +20,45 @@ h1 {
     margin-bottom: 30px;
 }
 
-#testForm {
-    background-color: white;
+.instructions {
+    background-color: #f8f9fa;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 30px;
 }
 
-label {
-    display: block;
-    margin: 15px 0;
-    font-size: 16px;
-    color: #444;
+.instructions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.instructions li {
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.question-container {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.question-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rating-scale {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.rating-option {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
 }
 
 input[type="range"] {
@@ -31,18 +66,66 @@ input[type="range"] {
     margin: 10px 0;
 }
 
-button {
+#submitBtn {
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
+    margin: 30px auto;
+    padding: 12px 24px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+#submitBtn:hover {
     background-color: #45a049;
+}
+
+.results-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.result-section {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.result-section h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.big-five-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease-in-out;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.error-message p {
+    margin: 10px 0;
 } 
