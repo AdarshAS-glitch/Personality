@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personality Test</title>
+</head>
+<body>
+  <h1>Personality Test</h1>
+  <form id="testForm"></form>
+  <button onclick="submitAnswers()">Submit</button>
+
+  <script>
+    async function loadQuestions() {
+      const res = await fetch('http://localhost:5000/questions');
+      const questions = await res.json();
+      const form = document.getElementById('testForm');
+
+      questions.forEach(q => {
+        const label = document.createElement('label');
+        label.innerText = q.text;
+        const input = document.createElement('input');
+        input.type = 'range';
+        input.min = 1;
+        input.max = 5;
+        input.name = q.id;
+        form.appendChild(label);
+        form.appendChild(document.createElement('br'));
+        form.appendChild(input);
+        form.appendChild(document.createElement('br'));
+      });
+    }
+
+    async function submitAnswers() {
+      const inputs = document.querySelectorAll('input');
+      const answers = {};
+      inputs.forEach(input => {
+        answers[input.name] = input.value;
+      });
+
+      const res = await fetch('http://localhost:5000/submit', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(answers)
+      });
+
+      const result = await res.json();
+      alert(`MBTI: ${result.mbti}\nEnneagram: ${result.enneagram}\nBig Five:\n` + 
+            JSON.stringify(result.big_five, null, 2));
+    }
+
+    loadQuestions();
+  </script>
+</body>
+</html>

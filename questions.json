@@ -1,0 +1,143 @@
+[
+    {
+      "id": 1,
+      "text": "I often seek new and exciting experiences, even if they involve some risk.",
+      "big_five": "Openness",
+      "mbti": "N",
+      "enneagram": "7"
+    },
+    {
+      "id": 2,
+      "text": "I tend to keep my emotions to myself.",
+      "big_five": "Emotional Stability",
+      "mbti": "T",
+      "enneagram": "5"
+    },
+    {
+      "id": 3,
+      "text": "I feel energized after socializing with others.",
+      "big_five": "Extraversion",
+      "mbti": "E",
+      "enneagram": "7"
+    },
+    {
+      "id": 4,
+      "text": "I make detailed plans and stick to them.",
+      "big_five": "Conscientiousness",
+      "mbti": "J",
+      "enneagram": "1"
+    },
+    {
+      "id": 5,
+      "text": "I am often concerned about what could go wrong.",
+      "big_five": "Neuroticism",
+      "mbti": "F",
+      "enneagram": "6"
+    },
+    {
+      "id": 6,
+      "text": "I enjoy spending time in deep thought or reflection.",
+      "big_five": "Openness",
+      "mbti": "I",
+      "enneagram": "4"
+    },
+    {
+      "id": 7,
+      "text": "I try to be helpful and considerate of others' feelings.",
+      "big_five": "Agreeableness",
+      "mbti": "F",
+      "enneagram": "2"
+    },
+    {
+      "id": 8,
+      "text": "I prefer having a flexible schedule rather than a fixed routine.",
+      "big_five": "Openness",
+      "mbti": "P",
+      "enneagram": "9"
+    },
+    {
+      "id": 9,
+      "text": "I find it difficult to stay still or focused for long periods.",
+      "big_five": "Low Conscientiousness",
+      "mbti": "P",
+      "enneagram": "7"
+    },
+    {
+      "id": 10,
+      "text": "I often doubt my own abilities.",
+      "big_five": "Neuroticism",
+      "mbti": "I",
+      "enneagram": "6"
+    },
+    {
+      "id": 11,
+      "text": "I enjoy solving complex problems and thinking logically.",
+      "big_five": "Openness",
+      "mbti": "T",
+      "enneagram": "5"
+    },
+    {
+      "id": 12,
+      "text": "I like to be the center of attention.",
+      "big_five": "Extraversion",
+      "mbti": "E",
+      "enneagram": "3"
+    },
+    {
+      "id": 13,
+      "text": "I am deeply affected by the moods of others.",
+      "big_five": "Neuroticism",
+      "mbti": "F",
+      "enneagram": "4"
+    },
+    {
+      "id": 14,
+      "text": "I strive to be morally upright and responsible.",
+      "big_five": "Conscientiousness",
+      "mbti": "J",
+      "enneagram": "1"
+    },
+    {
+      "id": 15,
+      "text": "I often adapt easily to changes around me.",
+      "big_five": "Openness",
+      "mbti": "P",
+      "enneagram": "9"
+    },
+    {
+      "id": 16,
+      "text": "I find meaning and inspiration in art, music, or poetry.",
+      "big_five": "Openness",
+      "mbti": "N",
+      "enneagram": "4"
+    },
+    {
+      "id": 17,
+      "text": "I feel a strong drive to succeed and be recognized.",
+      "big_five": "Extraversion",
+      "mbti": "E",
+      "enneagram": "3"
+    },
+    {
+      "id": 18,
+      "text": "I frequently seek harmony and avoid conflict.",
+      "big_five": "Agreeableness",
+      "mbti": "F",
+      "enneagram": "9"
+    },
+    {
+      "id": 19,
+      "text": "I like knowing exactly what is expected of me.",
+      "big_five": "Conscientiousness",
+      "mbti": "J",
+      "enneagram": "6"
+    },
+    {
+      "id": 20,
+      "text": "I enjoy working alone more than in a group.",
+      "big_five": "Introversion",
+      "mbti": "I",
+      "enneagram": "5"
+    }
+  ]
+  
