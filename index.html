@@ -5,50 +5,27 @@
   <link rel="stylesheet" type="text/css" href="static/styles.css">
 </head>
 <body>
-  <h1>Personality Test</h1>
-  <form id="testForm"></form>
-  <button onclick="submitAnswers()">Submit</button>
-
-  <script>
-    async function loadQuestions() {
-      const res = await fetch('http://localhost:5000/questions');
-      const questions = await res.json();
-      const form = document.getElementById('testForm');
-
-      questions.forEach(q => {
-        const label = document.createElement('label');
-        label.innerText = q.text;
-        const input = document.createElement('input');
-        input.type = 'range';
-        input.min = 1;
-        input.max = 5;
-        input.name = q.id;
-        form.appendChild(label);
-        form.appendChild(document.createElement('br'));
-        form.appendChild(input);
-        form.appendChild(document.createElement('br'));
-      });
-    }
-
-    async function submitAnswers() {
-      const inputs = document.querySelectorAll('input');
-      const answers = {};
-      inputs.forEach(input => {
-        answers[input.name] = input.value;
-      });
-
-      const res = await fetch('http://localhost:5000/submit', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(answers)
-      });
-
-      const result = await res.json();
-      alert(`MBTI: ${result.mbti}\nEnneagram: ${result.enneagram}\nBig Five:\n` + 
-            JSON.stringify(result.big_five, null, 2));
-    }
-
-    loadQuestions();
-  </script>
+  <div class="container">
+    <h1>Personality Test</h1>
+    <div class="instructions">
+      <p>Please rate each statement on a scale of 1-5, where:</p>
+      <ul>
+        <li>1 = Strongly Disagree</li>
+        <li>2 = Disagree</li>
+        <li>3 = Neutral</li>
+        <li>4 = Agree</li>
+        <li>5 = Strongly Agree</li>
+      </ul>
+    </div>
+    <form id="testForm"></form>
+    <button id="submitBtn" onclick="submitAnswers()">Submit Answers</button>
+    <div id="results" class="results-container" style="display: none;">
+      <h2>Your Results</h2>
+      <div id="mbtiResult" class="result-section"></div>
+      <div id="enneagramResult" class="result-section"></div>
+      <div id="bigFiveResult" class="result-section"></div>
+    </div>
+  </div>
+  <script src="static/script.js"></script>
 </body>
 </html>
